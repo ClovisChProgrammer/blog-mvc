@@ -1,0 +1,15 @@
+Configurando o GIT (Lembrete Ctrl+" abre e fecha o terminal)
+git config --global user.name ClovisChProgrammer
+git config --global user.email clovisch.programmer@gmail.com
+
+go.horse.com
+
+Lista SDK
+dotnet --list-sdks
+
+CRiando um projeto MVC
+dotnet new mvc -o BlogClovis
+
+Executar o projetocd BlogClovisChProgrammer
+cd BlogClovisChProgrammer
+dotnet watch run
