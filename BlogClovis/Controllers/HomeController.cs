@@ -32,7 +32,7 @@ public class HomeController : Controller
         List<Postagem> postagens = [
             new() {
                 Id = 1,
-                Nome = "JOGOS MENSAIS DA PLAYSTATION PLUS",
+                Nome = "Jogos Mensais da Playstation Plus",
                 CategoriaId = 1,
                 Categoria = categoria,
                 DataPostagem = DateTime.Parse("07/08/2025"),
@@ -42,9 +42,9 @@ public class HomeController : Controller
                 Foto = "/img/1.jpg"
             },
           new() {
-                Id = 1,
+                Id = 2,
                 Nome = "Mais jogos chegam à Promoção de Inverno da PlayStation Store",
-                CategoriaId = 1,
+                CategoriaId = 2,
                 Categoria = categoria,
                 DataPostagem = DateTime.Parse("17/07/2025"),
                 Descricao = "Incluindo WWE 2K25, Doom: The Dark Ages, Cyberpunk 2077: Ultimate Edition e mais.",
@@ -54,9 +54,9 @@ public class HomeController : Controller
           },
 
           new() {
-                Id = 1,
+                Id = 3,
                 Nome = "Project Defiant ganha nome oficial.",
-                CategoriaId = 1,
+                CategoriaId = 3,
                 Categoria = categoria,
                 DataPostagem = DateTime.Parse("28/07/2025"),
                 Descricao = "Incluindo WWE 2K25, Doom: The Dark Ages, Cyberpunk 2077: Ultimate Edition e mais.",
@@ -66,9 +66,9 @@ public class HomeController : Controller
           },
 
           new() {
-                Id = 1,
+                Id = 4,
                 Nome = "Silent Hill f: relatório em primeira mão",
-                CategoriaId = 1,
+                CategoriaId = 4,
                 Categoria = categoria,
                 DataPostagem = DateTime.Parse("17/07/2025"),
                 Descricao = "Conheça um mundo lindo e ao mesmo tempo assombroso na pele de uma adolescente japonesa nos anos 1960.",
@@ -81,7 +81,10 @@ public class HomeController : Controller
         ];
         return View(postagens);
     }
-
+public IActionResult Postagem()
+{
+    return View();
+}
     public IActionResult Privacy()
     {
         return View();
