@@ -80,7 +80,7 @@ public IActionResult Postagem(int id)
         var postagem = postagens.Where(p => p.Id == id).SingleOrDefault();
     if (postagem == null)
         return NotFound();
-    return View();
+    return View(postagem);
     }
 
     public IActionResult Privacy()
