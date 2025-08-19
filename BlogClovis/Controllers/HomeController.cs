@@ -8,11 +8,12 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     private List<Postagem> postagens;
+    private List<Categoria> categorias;
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
         // Criar objetos
-        List<Categoria> categorias = [
+        categorias = [
             new() { Id = 1, Nome = "Tecnologia" },
             new() { Id = 2, Nome = "IA"},
             new() { Id = 3, Nome = "Eletronicos"},
@@ -80,6 +81,7 @@ public IActionResult Postagem(int id)
         var postagem = postagens.Where(p => p.Id == id).SingleOrDefault();
     if (postagem == null)
         return NotFound();
+        ViewData["Categorias"] = categorias;
     return View(postagem);
     }
 
